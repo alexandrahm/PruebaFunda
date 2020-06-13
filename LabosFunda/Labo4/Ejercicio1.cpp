@@ -1,7 +1,7 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
-int main(){
+ int main(){
  int numero, divisor;
 cout<<"Ingrese numero a dividir: ";
 cin>> numero;
