@@ -1,13 +1,20 @@
 #include <iostream>
 using namespace std;
 //ejercicio 1 MCD
-int e1()
-{
-    int A, B;
-    cout << "Ingrese numero A: " << endl;
-    cin >> A;
-    cout << "Ingrese numero B: " << endl;
-    cin >> B;
+int mcd(int x, int y){
+    int aux;
+    if(x%y==0){
+        return y;
+    }else{
+        while(x%y!=0){
+        aux=x;
+        x=y;
+        y=aux%y;
+        if(aux%y==0 && x%y==0){
+        return y;
+        }
+    }
+    }
 }
 //ejercicio 2 Hora 1 segundos despues
 int e2()
@@ -117,11 +124,20 @@ int e4()
 }
 int main(){
     int n=0;
-    cout<<"ingrese un numero del 1 al 4: "<<endl;
+    cout<<"Ejercicio 1--> MCD de un numero"<<endl<<"Ejercicio 2 --> Hora un segundo despues"<<endl<<"Ejercicio 3--> Año bisiesto o no"<<endl<<"Ejercicio 4--> Fecha 1 dia despues"<<endl;
+    cout<<"Ingrese el numero (1 al 4) del ejercicio que desee ejecutar: "<<endl;
     cin>>n;
     switch(n){
         case 1:
-        e1();
+            int x, y;
+            cout<<"Antes de ingresar los numeros por favor verifique que su primer numero sea mayor al segundo :)"<<endl;
+            cout << "Ingrese numero x: " << endl;
+            cin >> x;
+            cout << "Ingrese numero y: " << endl;
+            cin >> y;
+            cout<<"Con x= "<<x<<" y y= "<<y<<endl;
+            cout<<"El MCD es "<<mcd(x,y)<<endl;
+            return 0;
         break;
         case 2:
         e2();
