@@ -118,9 +118,9 @@ int e4()
                 a++;
             }
         }
-        cout << "fecha: " << d << "-" << m << "-" << a << endl;
-        return 0;
     }
+    cout << "fecha: " << d << "-" << m << "-" << a << endl;
+ return 0;
 }
 int main(){
     int n=0;
